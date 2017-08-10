@@ -1,0 +1,22 @@
+{
+  "name": "movie-search-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "movie-search.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaycribas/Movie-Search-CLI.git"
+  },
+  "author": "Jay Cribas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaycribas/Movie-Search-CLI/issues"
+  },
+  "homepage": "https://github.com/jaycribas/Movie-Search-CLI#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
+  }
+}

@@ -14,8 +14,11 @@ function searchImdb(searchTerm){
       response.on('data', data => body += data)
 
       response.on('end', () => {
-        console.log("body (╯°□°）╯︵ ┻━┻", body)
-      })
+        let $ = cheerio.load(body)
+        let results = $('.result_text').map((i, elm) => $(elm).text()).toArray()
+        console.log("results (╯°□°）╯︵ ┻━┻", results)
+        })
+
     }
   )
 }

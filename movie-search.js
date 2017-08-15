@@ -15,10 +15,12 @@ function searchImdb(searchTerm){
 
       response.on('end', () => {
         let $ = cheerio.load(body)
-        let results = $('.result_text').map((i, elm) => $(elm).text()).toArray()
-        console.log("results (╯°□°）╯︵ ┻━┻", results)
+        let results = $('.findSection')
+          .first().find('.result_text').children().remove('small').end()
+          .map((i, elm) => $(elm).text())
+          .toArray()
+        console.log(results.join('\n'))
         })
-
     }
   )
 }
